@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "e0a2d993-1bb2-478f-a00e-f8eb2e805d25",
+		"name": "Interne Teams Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "DomainValues",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44339/api/DomainValues?Page=1&PageSize=5",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44339",
+					"path": [
+						"api",
+						"DomainValues"
+					],
+					"query": [
+						{
+							"key": "Page",
+							"value": "1"
+						},
+						{
+							"key": "PageSize",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DomainValues/TimepointsAverage",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44339/api/DomainValues/TimepointsAverage?CollactionName=domainA",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44339",
+					"path": [
+						"api",
+						"DomainValues",
+						"TimepointsAverage"
+					],
+					"query": [
+						{
+							"key": "CollactionName",
+							"value": "domainA"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

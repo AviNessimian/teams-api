@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F52D3261-887E-476A-8EF6-52C0BCCDF22E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{58EDE548-55AF-420F-87B8-D633517412DB}"
+	ProjectSection(SolutionItems) = preProject
+		docs\Exercise-Details.txt = docs\Exercise-Details.txt
+		docs\Interne Teams Api.postman_collection.json = docs\Interne Teams Api.postman_collection.json
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InternetTeams.Web", "InternetTeams.Web\InternetTeams.Web.csproj", "{1001DAF4-83CC-4BAE-B825-9A889A0D9310}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InternetTeams.Persistence", "InternetTeams.Persistence\InternetTeams.Persistence.csproj", "{45D5A100-D2BC-4CE2-8E0E-1963BC9F9B4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InternetTeams.Domain", "InternetTeams.Domain\InternetTeams.Domain.csproj", "{E4D4EA81-8415-467E-AD46-94077B94E502}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InternetTeams.Application", "InternetTeams.Application\InternetTeams.Application.csproj", "{A5B7DEAB-3ADD-419F-BD32-B010D26CE42F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1001DAF4-83CC-4BAE-B825-9A889A0D9310}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1001DAF4-83CC-4BAE-B825-9A889A0D9310}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1001DAF4-83CC-4BAE-B825-9A889A0D9310}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1001DAF4-83CC-4BAE-B825-9A889A0D9310}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45D5A100-D2BC-4CE2-8E0E-1963BC9F9B4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45D5A100-D2BC-4CE2-8E0E-1963BC9F9B4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45D5A100-D2BC-4CE2-8E0E-1963BC9F9B4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45D5A100-D2BC-4CE2-8E0E-1963BC9F9B4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4D4EA81-8415-467E-AD46-94077B94E502}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4D4EA81-8415-467E-AD46-94077B94E502}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4D4EA81-8415-467E-AD46-94077B94E502}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4D4EA81-8415-467E-AD46-94077B94E502}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5B7DEAB-3ADD-419F-BD32-B010D26CE42F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5B7DEAB-3ADD-419F-BD32-B010D26CE42F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5B7DEAB-3ADD-419F-BD32-B010D26CE42F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5B7DEAB-3ADD-419F-BD32-B010D26CE42F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1001DAF4-83CC-4BAE-B825-9A889A0D9310} = {F52D3261-887E-476A-8EF6-52C0BCCDF22E}
+		{45D5A100-D2BC-4CE2-8E0E-1963BC9F9B4A} = {F52D3261-887E-476A-8EF6-52C0BCCDF22E}
+		{E4D4EA81-8415-467E-AD46-94077B94E502} = {F52D3261-887E-476A-8EF6-52C0BCCDF22E}
+		{A5B7DEAB-3ADD-419F-BD32-B010D26CE42F} = {F52D3261-887E-476A-8EF6-52C0BCCDF22E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CA076BD4-9088-49EE-A24D-5FA56F8D8866}
+	EndGlobalSection
+EndGlobal

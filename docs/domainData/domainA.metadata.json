@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":2,"key":{"_id":1},"name":"_id_","ns":"domainData.domainA"},{"v":2,"key":{"SubjectId":1},"name":"SubjectId_1","ns":"domainData.domainA"},{"v":2,"key":{"Timepoint":1},"name":"Timepoint_1","ns":"domainData.domainA"}],"uuid":"189733e119fc4932a0b720b941633611"}
