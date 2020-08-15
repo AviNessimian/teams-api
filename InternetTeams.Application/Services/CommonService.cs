@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace InternetTeams.Application.Services
 {
-    public class CommonService : ICommonService
+    internal class CommonService : ICommonService
     {
         private readonly IDomainValueRepository _domainValueRepository;
 

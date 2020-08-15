@@ -5,12 +5,16 @@ using System;
 
 namespace InternetTeams.Persistence.DomainData
 {
-    internal class DbContext
+    internal class DomainDataContext
     {
-        public DbContext(DbClient client)
+        internal DomainDataContext(DomainDataClient client)
         {
-            var dbName = client.DatabaseName;
+            var dbName = client.Settings.Credential?.Identity?.Source
+                ??
+                throw new ArgumentNullException("Source cant be null!");
+
             Database = client.GetDatabase(dbName);
+
             if (!Ping())
             {
                 throw new PersistenceException($"the Database {dbName} is not connected");
@@ -18,9 +22,9 @@ namespace InternetTeams.Persistence.DomainData
 
         }
 
-        public IMongoDatabase Database { get; }
+        internal IMongoDatabase Database { get; }
 
-        public bool Ping()
+        internal bool Ping()
         {
             var command = new BsonDocument { { "ping", 1 } };
             try

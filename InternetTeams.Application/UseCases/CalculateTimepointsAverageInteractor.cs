@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace InternetTeams.Application.UseCases
 {
-    public class CalculateTimepointsAverageInteractor : ICalculateTimepointsAverageInteractor
+    internal class CalculateTimepointsAverageInteractor : ICalculateTimepointsAverageInteractor
     {
         private readonly IDomainValueRepository _domainValueRepository;
         private readonly ICommonService _commonService;

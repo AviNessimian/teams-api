@@ -15,10 +15,10 @@ namespace InternetTeams.Persistence.Repositories
 {
     internal class DomainValueRepository : IDomainValueRepository
     {
-        private readonly DbContext _dbContext;
+        private readonly DomainDataContext _dbContext;
         private readonly IConfiguration _configuration;
 
-        public DomainValueRepository(DbContext dbContext, IConfiguration configuration)
+        public DomainValueRepository(DomainDataContext dbContext, IConfiguration configuration)
         {
             _dbContext = dbContext;
             _configuration = configuration;

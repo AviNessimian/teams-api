@@ -5,15 +5,14 @@ using System;
 
 namespace InternetTeams.Persistence.DomainData
 {
-    public class DbClient : MongoClient
+    internal class DomainDataClient : MongoClient
     {
-        private readonly IMongoClient _client;
+        internal DomainDataClient(IConfigurationSection configurationSection)
+            : base(GeSettings(configurationSection.Get<DomainDataSettings>())) { }
 
-        public DbClient(IConfigurationSection configurationSection)
+
+        internal static MongoClientSettings GeSettings(DomainDataSettings settings)
         {
-
-            var settings = configurationSection.Get<DbSettings>();
-
             var credentials = MongoCredential.CreateCredential(
                 databaseName: settings.DatabaseName,
                 username: settings.User,
@@ -29,13 +28,8 @@ namespace InternetTeams.Persistence.DomainData
                 ServerSelectionTimeout = TimeSpan.FromSeconds(settings.ServerSelectionTimeoutFromSeconds),
             };
 
-            DatabaseName = settings.DatabaseName;
-            _client = new MongoClient(mongoClientSettings);
-
+            return mongoClientSettings;
         }
 
-        public string DatabaseName { get; }
     }
-
-
 }

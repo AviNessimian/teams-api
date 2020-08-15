@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InternetTeams.Application.UseCases
 {
-    public class GetDomainValuesByNameInteractor : IGetDomainValuesByNameInteractor
+    internal class GetDomainValuesByNameInteractor : IGetDomainValuesByNameInteractor
     {
         private readonly IDomainValueRepository _domainValueRepository;
         private readonly ICommonService _commonService;
