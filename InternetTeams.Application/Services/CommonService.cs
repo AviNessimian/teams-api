@@ -2,6 +2,7 @@
 using InternetTeams.Application.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace InternetTeams.Application.Services
@@ -15,7 +16,7 @@ namespace InternetTeams.Application.Services
             _domainValueRepository = domainValueRepository;
         }
 
-        public async Task<List<string>> GetDomainNames()
+        public async Task<List<string>> GetDomainNames(CancellationToken cancellationToken = default)
         {
             var domains = await _domainValueRepository.GetDomainValueCollectionsNames();
             var listOfDomainNames = domains.ToList();
@@ -23,9 +24,9 @@ namespace InternetTeams.Application.Services
         }
 
 
-        public async Task<string> ValidateCollectionsName(string collactionName)
+        public async Task<string> ValidateCollectionsName(string collactionName, CancellationToken cancellationToken = default)
         {
-            var collectionsNames = await _domainValueRepository.GetDomainValueCollectionsNames();
+            var collectionsNames = await _domainValueRepository.GetDomainValueCollectionsNames(cancellationToken);
 
             var collacationName = collectionsNames.FirstOrDefault(x => x.ToLower() == collactionName.ToLower());
             if (collacationName == null)

@@ -11,13 +11,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{58EDE548-5
 		docs\Interne Teams Api.postman_collection.json = docs\Interne Teams Api.postman_collection.json
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InternetTeams.Web", "InternetTeams.Web\InternetTeams.Web.csproj", "{1001DAF4-83CC-4BAE-B825-9A889A0D9310}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InternetTeams.Web", "InternetTeams.Web\InternetTeams.Web.csproj", "{1001DAF4-83CC-4BAE-B825-9A889A0D9310}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InternetTeams.Persistence", "InternetTeams.Persistence\InternetTeams.Persistence.csproj", "{45D5A100-D2BC-4CE2-8E0E-1963BC9F9B4A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InternetTeams.Persistence", "InternetTeams.Persistence\InternetTeams.Persistence.csproj", "{45D5A100-D2BC-4CE2-8E0E-1963BC9F9B4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InternetTeams.Domain", "InternetTeams.Domain\InternetTeams.Domain.csproj", "{E4D4EA81-8415-467E-AD46-94077B94E502}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InternetTeams.Domain", "InternetTeams.Domain\InternetTeams.Domain.csproj", "{E4D4EA81-8415-467E-AD46-94077B94E502}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InternetTeams.Application", "InternetTeams.Application\InternetTeams.Application.csproj", "{A5B7DEAB-3ADD-419F-BD32-B010D26CE42F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InternetTeams.Application", "InternetTeams.Application\InternetTeams.Application.csproj", "{A5B7DEAB-3ADD-419F-BD32-B010D26CE42F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{ED0A213E-57F1-4FC2-A7DB-93FFE7079256}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InternetTeams.UnitTests", "InternetTeams.UnitTests\InternetTeams.UnitTests.csproj", "{DDC070AD-069F-40D8-ACF3-B991FA676D83}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +45,10 @@ Global
 		{A5B7DEAB-3ADD-419F-BD32-B010D26CE42F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5B7DEAB-3ADD-419F-BD32-B010D26CE42F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5B7DEAB-3ADD-419F-BD32-B010D26CE42F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDC070AD-069F-40D8-ACF3-B991FA676D83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDC070AD-069F-40D8-ACF3-B991FA676D83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDC070AD-069F-40D8-ACF3-B991FA676D83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDC070AD-069F-40D8-ACF3-B991FA676D83}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +58,7 @@ Global
 		{45D5A100-D2BC-4CE2-8E0E-1963BC9F9B4A} = {F52D3261-887E-476A-8EF6-52C0BCCDF22E}
 		{E4D4EA81-8415-467E-AD46-94077B94E502} = {F52D3261-887E-476A-8EF6-52C0BCCDF22E}
 		{A5B7DEAB-3ADD-419F-BD32-B010D26CE42F} = {F52D3261-887E-476A-8EF6-52C0BCCDF22E}
+		{DDC070AD-069F-40D8-ACF3-B991FA676D83} = {ED0A213E-57F1-4FC2-A7DB-93FFE7079256}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CA076BD4-9088-49EE-A24D-5FA56F8D8866}

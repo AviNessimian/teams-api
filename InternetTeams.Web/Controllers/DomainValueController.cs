@@ -3,6 +3,7 @@ using InternetTeams.Application.Models;
 using InternetTeams.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace InternetTeams.Web.Controllers
@@ -11,25 +12,29 @@ namespace InternetTeams.Web.Controllers
     {
         [HttpGet]
         public async Task<ActionResult<List<DomainValue>>> Get(
+            CancellationToken cancellationToken,
             [FromServices] IGetAllDomainValuesInteractor Interactor,
-            [FromQuery] GetAllDomainValuesRequest request) => Ok(await Interactor.Handle(request));
+            [FromQuery] GetAllDomainValuesRequest request) => Ok(await Interactor.Handle(request, cancellationToken));
 
 
         [HttpGet("ByName")]
         public async Task<ActionResult<List<DomainValue>>> Get(
+            CancellationToken cancellationToken,
             [FromServices] IGetDomainValuesByNameInteractor Interactor,
-            [FromQuery] GetDomainValuesByNameRequest request) => Ok(await Interactor.Handle(request));
+            [FromQuery] GetDomainValuesByNameRequest request) => Ok(await Interactor.Handle(request, cancellationToken));
 
 
         [HttpGet("DomainNames")]
         public async Task<ActionResult<List<string>>> Get(
-              [FromServices] ICommonService commonService) => Ok(await commonService.GetDomainNames());
+              CancellationToken cancellationToken,
+              [FromServices] ICommonService commonService) => Ok(await commonService.GetDomainNames(cancellationToken));
 
 
         [HttpGet("TimepointsAverage")]
         public async Task<IActionResult> Get(
+            CancellationToken cancellationToken,
             [FromServices] ICalculateTimepointsAverageInteractor Interactor,
-            [FromQuery] CalculateTimepointsAverageRequest request) => Ok(await Interactor.Handle(request));
+            [FromQuery] CalculateTimepointsAverageRequest request) => Ok(await Interactor.Handle(request, cancellationToken));
 
     }
 }

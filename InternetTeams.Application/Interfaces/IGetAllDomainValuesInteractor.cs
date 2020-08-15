@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 using InternetTeams.Application.Models;
 using InternetTeams.Domain.Entities;
@@ -7,6 +8,6 @@ namespace InternetTeams.Application.Interfaces
 {
     public interface IGetAllDomainValuesInteractor
     {
-        Task<List<DomainValue>> Handle(GetAllDomainValuesRequest input);
+        Task<List<DomainValue>> Handle(GetAllDomainValuesRequest input, CancellationToken cancellationToken = default);
     }
 }
