@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace InternetTeams.Application.Exceptions
+namespace InternetTeams.Domain.Exceptions
 {
     public class NotFoundException : Exception
     {

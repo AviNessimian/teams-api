@@ -1,4 +1,4 @@
-﻿using InternetTeams.Application.Exceptions;
+﻿using InternetTeams.Domain.Exceptions;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using System;

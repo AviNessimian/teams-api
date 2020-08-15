@@ -1,14 +1,14 @@
-﻿using InternetTeams.Application.Exceptions;
-using InternetTeams.Application.Interfaces;
-using FluentValidation;
+﻿using FluentValidation;
+using InternetTeams.Domain.Bases;
+using InternetTeams.Domain.Exceptions;
 
 namespace InternetTeams.Application.Models
 {
-    public class GetDomainValuesByNameRequest : GetBaseRequest, IRequestModel
+    public class GetDomainValuesByNameRequest : AbstractPagingRequest
     {
         public string CollactionName { get; set; }
 
-        public void Validate()
+        public override void Validate()
         {
             var validationResult = new GetDomainValuesByNameRequestValidator().Validate(this);
             if (!validationResult.IsValid)

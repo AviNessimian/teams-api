@@ -6,7 +6,6 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.2.0" />
-		<PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="9.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>

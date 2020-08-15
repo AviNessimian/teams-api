@@ -1,4 +1,4 @@
-﻿using InternetTeams.Application.Exceptions;
+﻿using InternetTeams.Domain.Exceptions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
@@ -9,12 +9,11 @@ using System;
 using System.Collections.Generic;
 using System.Net;
 
-namespace InternetTeams.Web.Filters
+namespace InternetTeams.Infrastructure.ExceptionHandling
 {
-    public class ApiExceptionFilter : IExceptionFilter
+    internal class ApiExceptionFilter : IExceptionFilter
     {
         private readonly ILogger<ApiExceptionFilter> _logger;
-
         private readonly IDictionary<Type, Action<ExceptionContext>> _exceptionHandlers;
 
         public ApiExceptionFilter(ILogger<ApiExceptionFilter> logger)
@@ -61,7 +60,7 @@ namespace InternetTeams.Web.Filters
             {
                 //Details = details,
                 ErrorMsg = HttpStatusCode.InternalServerError.ToString()
-            }); 
+            });
 
             context.ExceptionHandled = true;
         }

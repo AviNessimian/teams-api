@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace InternetTeams.Application.Interfaces
+namespace InternetTeams.Domain.Contracts
 {
     public interface IDomainValueRepository
     {

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using InternetTeams.Domain.Bases;
+using System.Collections.Generic;
 
 namespace InternetTeams.Domain.ValueObjects
 {

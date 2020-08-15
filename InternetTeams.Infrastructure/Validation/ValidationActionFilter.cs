@@ -1,20 +1,19 @@
-﻿using InternetTeams.Application.Interfaces;
+﻿using InternetTeams.Domain.Bases;
 using Microsoft.AspNetCore.Mvc.Filters;
 using System.Linq;
 
-namespace InternetTeams.Web.Filters
+namespace InternetTeams.Infrastructure.Validation
 {
-    public class ValidationActionFilter : IActionFilter
+    internal class ValidationActionFilter : IActionFilter
     {
         public void OnActionExecuting(ActionExecutingContext context)
         {
             // our code before action executes
-            foreach (var argument in context.ActionArguments.Values.Where(v => v is IRequestModel))
+            foreach (var argument in context.ActionArguments.Values.Where(v => v is AbstractRequest))
             {
-                IRequestModel request = argument as IRequestModel;
+                var request = argument as AbstractRequest;
                 request.Validate();
             }
-
         }
 
         public void OnActionExecuted(ActionExecutedContext context)

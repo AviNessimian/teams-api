@@ -1,7 +1,7 @@
 ﻿using MongoDB.Bson.Serialization.Attributes;
 using System.Runtime.Serialization;
 
-namespace InternetTeams.Domain.Entities
+namespace InternetTeams.Domain.Bases
 {
     public abstract class Entity
     {

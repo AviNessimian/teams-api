@@ -7,11 +7,12 @@
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="2.2.0" />
 		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="2.2.4" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.2.0" />
 		<PackageReference Include="MongoDB.Driver" Version="2.10.0" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\InternetTeams.Application\InternetTeams.Application.csproj" />
+	  <ProjectReference Include="..\InternetTeams.Domain\InternetTeams.Domain.csproj" />
 	</ItemGroup>
 
 </Project>

@@ -1,4 +1,4 @@
-﻿using InternetTeams.Application.Interfaces;
+﻿using InternetTeams.Domain.Contracts;
 using InternetTeams.Persistence.DomainData;
 using InternetTeams.Persistence.Repositories;
 using Microsoft.Extensions.Configuration;

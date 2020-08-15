@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace InternetTeams.Domain.ValueObjects
+namespace InternetTeams.Domain.Bases
 {
     public abstract class ValueObject
     {

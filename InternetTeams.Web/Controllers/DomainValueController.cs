@@ -1,7 +1,7 @@
 ﻿using InternetTeams.Application.Interfaces;
 using InternetTeams.Application.Models;
-using InternetTeams.Application.Services;
 using InternetTeams.Domain.Entities;
+using InternetTeams.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading;

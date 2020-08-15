@@ -1,5 +1,6 @@
 ﻿using InternetTeams.Application.Interfaces;
 using InternetTeams.Application.Models;
+using InternetTeams.Domain.Contracts;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;

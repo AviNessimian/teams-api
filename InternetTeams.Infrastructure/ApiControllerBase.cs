@@ -1,7 +1,8 @@
-﻿using InternetTeams.Web.Filters;
+﻿using InternetTeams.Infrastructure.ExceptionHandling;
+using InternetTeams.Infrastructure.Validation;
 using Microsoft.AspNetCore.Mvc;
 
-namespace InternetTeams.Web.Controllers
+namespace InternetTeams.Infrastructure
 {
     [Route("api/[controller]")]
     [ApiController]

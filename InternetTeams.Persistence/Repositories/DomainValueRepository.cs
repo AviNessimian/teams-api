@@ -1,4 +1,4 @@
-﻿using InternetTeams.Application.Interfaces;
+﻿using InternetTeams.Domain.Contracts;
 using InternetTeams.Domain.Entities;
 using InternetTeams.Domain.ValueObjects;
 using InternetTeams.Persistence.DomainData;

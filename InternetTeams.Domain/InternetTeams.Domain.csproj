@@ -5,7 +5,12 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<PackageReference Include="FluentValidation" Version="9.1.2" />
 		<PackageReference Include="MongoDB.Bson" Version="2.11.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Factories\" />
 	</ItemGroup>
 
 </Project>

@@ -1,13 +1,13 @@
-﻿using InternetTeams.Application.Exceptions;
-using InternetTeams.Application.Interfaces;
-using FluentValidation;
+﻿using FluentValidation;
+using InternetTeams.Domain.Bases;
+using InternetTeams.Domain.Exceptions;
 
 namespace InternetTeams.Application.Models
 {
-    public class CalculateTimepointsAverageRequest : IRequestModel
+    public class CalculateTimepointsAverageRequest : AbstractRequest
     {
         public string CollactionName { get; set; }
-        public void Validate()
+        public override void Validate()
         {
             var validationResult = new CalculateTimepointsAverageValidator().Validate(this);
             if (!validationResult.IsValid)

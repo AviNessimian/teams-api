@@ -11,12 +11,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://localhost:44339/api/DomainValues?Page=1&PageSize=5",
+					"raw": "https://localhost:44340/api/DomainValues?Page=1&PageSize=5",
 					"protocol": "https",
 					"host": [
 						"localhost"
 					],
-					"port": "44339",
+					"port": "44340",
 					"path": [
 						"api",
 						"DomainValues"
@@ -41,12 +41,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://localhost:44339/api/DomainValues/TimepointsAverage?CollactionName=domainA",
+					"raw": "https://localhost:44340/api/DomainValues/TimepointsAverage?CollactionName=domainA",
 					"protocol": "https",
 					"host": [
 						"localhost"
 					],
-					"port": "44339",
+					"port": "44340",
 					"path": [
 						"api",
 						"DomainValues",
@@ -57,6 +57,62 @@
 							"key": "CollactionName",
 							"value": "domainA"
 						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DomainValues/ByName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44340/api/DomainValues/ByName?Page=1&PageSize=5&CollactionName=domainA",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44340",
+					"path": [
+						"api",
+						"DomainValues",
+						"ByName"
+					],
+					"query": [
+						{
+							"key": "Page",
+							"value": "1"
+						},
+						{
+							"key": "PageSize",
+							"value": "5"
+						},
+						{
+							"key": "CollactionName",
+							"value": "domainA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DomainValues/DomainNames",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44340/api/DomainValues/DomainNames",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44340",
+					"path": [
+						"api",
+						"DomainValues",
+						"DomainNames"
 					]
 				}
 			},

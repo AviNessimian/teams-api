@@ -1,4 +1,6 @@
-﻿namespace InternetTeams.Domain.Entities
+﻿using InternetTeams.Domain.Bases;
+
+namespace InternetTeams.Domain.Entities
 {
     public class DomainValue : Entity
     {
