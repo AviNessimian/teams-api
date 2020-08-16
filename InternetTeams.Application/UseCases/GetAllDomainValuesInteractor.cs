@@ -25,7 +25,7 @@ namespace InternetTeams.Application.UseCases
 
             foreach (var collectionName in await _domainValueRepository.GetDomainValueCollectionsNames(cancellationToken))
             {
-                var domainValues = await _domainValueRepository.Get(collectionName, new Input<PagingInput>(input.Data), null, cancellationToken);
+                var domainValues = await _domainValueRepository.Get(collectionName, Input<PagingInput>.Set(input.Data), null, cancellationToken);
                 output.AddRange(domainValues);
             }
 
