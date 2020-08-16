@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using InternetTeams.Domain.Contracts;
+using InternetTeams.Infrastructure.Services;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 
 namespace Microsoft.Extensions.DependencyInjection
@@ -8,6 +10,8 @@ namespace Microsoft.Extensions.DependencyInjection
         public static IServiceCollection AddInfrastructure(this IServiceCollection services)
         {
 
+            services.AddLazyCache();
+            services.Decorate<IDomainValueRepository, DomainValueRepositoryCache>();
 
             return services;
         }

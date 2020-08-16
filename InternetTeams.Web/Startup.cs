@@ -38,9 +38,9 @@ namespace InternetTeams.Web
                 .AddJsonOptions(options => options.SerializerSettings.ContractResolver = new DefaultContractResolver());
 
             services
-                .AddInfrastructure()
                 .AddApplication()
-                .AddPersistence(Configuration);
+                .AddPersistence(Configuration)
+                .AddInfrastructure();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
