@@ -1,5 +1,6 @@
 ﻿using InternetTeams.Application.Interfaces;
 using InternetTeams.Application.Models;
+using InternetTeams.Domain.Bases;
 using InternetTeams.Domain.Contracts;
 using InternetTeams.Domain.Entities;
 using System.Collections.Generic;
@@ -18,19 +19,17 @@ namespace InternetTeams.Application.UseCases
         }
 
         // Create an implementation to retrieve a list of all domains (collection names).
-        public async Task<List<DomainValue>> Handle(GetAllDomainValuesRequest input, CancellationToken cancellationToken = default)
+        public async Task<List<DomainValue>> Handle(Input<GetAllDomainValuesRequest> input, CancellationToken cancellationToken = default)
         {
-            var allDomainValues = new List<DomainValue>();
+            var output = new List<DomainValue>();
 
             foreach (var collectionName in await _domainValueRepository.GetDomainValueCollectionsNames(cancellationToken))
             {
-                var domainValues = await _domainValueRepository.Get(collectionName, input, null, cancellationToken);
-                allDomainValues.AddRange(domainValues);
+                var domainValues = await _domainValueRepository.Get(collectionName, new Input<PagingInput>(input.Data), null, cancellationToken);
+                output.AddRange(domainValues);
             }
 
-            return allDomainValues;
+            return output;
         }
-
     }
-
 }

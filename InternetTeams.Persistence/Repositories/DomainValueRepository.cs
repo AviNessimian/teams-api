@@ -27,7 +27,7 @@ namespace InternetTeams.Persistence.Repositories
 
         public async Task<IEnumerable<DomainValue>> Get(
             string collactionName,
-            AbstractPagingRequest pagingRequest,
+            Input<PagingInput> pagingInput,
             Expression<Func<DomainValue, bool>> filter = null,
             CancellationToken cancellationToken = default)
         {
@@ -35,8 +35,8 @@ namespace InternetTeams.Persistence.Repositories
 
             var domainValues = await collaction
                 .Find(filter ?? (_ => true))
-                .Skip((pagingRequest.Page - 1) * pagingRequest.PageSize)
-                .Limit(pagingRequest.PageSize)
+                .Skip((pagingInput.Data.Page - 1) * pagingInput.Data.PageSize)
+                .Limit(pagingInput.Data.PageSize)
                 .ToListAsync(cancellationToken);
 
             return domainValues;

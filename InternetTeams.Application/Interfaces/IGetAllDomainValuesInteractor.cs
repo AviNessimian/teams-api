@@ -1,13 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using InternetTeams.Application.Models;
+using InternetTeams.Domain.Bases;
+using InternetTeams.Domain.Entities;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using InternetTeams.Application.Models;
-using InternetTeams.Domain.Entities;
 
 namespace InternetTeams.Application.Interfaces
 {
     public interface IGetAllDomainValuesInteractor
     {
-        Task<List<DomainValue>> Handle(GetAllDomainValuesRequest input, CancellationToken cancellationToken = default);
+        Task<List<DomainValue>> Handle(Input<GetAllDomainValuesRequest> input, CancellationToken cancellationToken = default);
     }
 }

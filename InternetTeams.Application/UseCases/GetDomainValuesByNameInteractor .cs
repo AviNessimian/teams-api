@@ -1,5 +1,6 @@
 ﻿using InternetTeams.Application.Interfaces;
 using InternetTeams.Application.Models;
+using InternetTeams.Domain.Bases;
 using InternetTeams.Domain.Contracts;
 using System.Linq;
 using System.Threading;
@@ -20,17 +21,15 @@ namespace InternetTeams.Application.UseCases
         }
 
         // Create an implementation to retrieve the documents of a domain by domain name (collection name). 
-        public async Task<GetDomainValuesByNameResponse> Handle(GetDomainValuesByNameRequest input, CancellationToken cancellationToken)
+        public async Task<GetDomainValuesByNameResponse> Handle(Input<GetDomainValuesByNameRequest> input, CancellationToken cancellationToken)
         {
-            var collacationName = await _commonService.ValidateCollectionsName(input.CollactionName);
+            var collacationName = await _commonService.ValidateCollectionsName(input.Data.CollactionName);
 
-            var domainValueList = await _domainValueRepository.Get(collacationName, input, null, cancellationToken);
+            var domainValueList = await _domainValueRepository.Get(collacationName, new Input<PagingInput>(input.Data), null, cancellationToken);
 
             var count = await _domainValueRepository.Count(collacationName);
 
             return new GetDomainValuesByNameResponse(count, domainValueList.ToList());
         }
-
-
     }
 }

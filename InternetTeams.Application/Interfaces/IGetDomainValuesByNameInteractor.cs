@@ -1,4 +1,5 @@
 ﻿using InternetTeams.Application.Models;
+using InternetTeams.Domain.Bases;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -6,6 +7,6 @@ namespace InternetTeams.Application.Interfaces
 {
     public interface IGetDomainValuesByNameInteractor
     {
-        Task<GetDomainValuesByNameResponse> Handle(GetDomainValuesByNameRequest input, CancellationToken cancellationToken);
+        Task<GetDomainValuesByNameResponse> Handle(Input<GetDomainValuesByNameRequest> input, CancellationToken cancellationToken);
     }
 }

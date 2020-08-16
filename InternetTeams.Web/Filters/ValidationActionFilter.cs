@@ -8,17 +8,16 @@ namespace InternetTeams.Web.Filters
     {
         public void OnActionExecuting(ActionExecutingContext context)
         {
-            // our code before action executes
-            foreach (var argument in context.ActionArguments.Values.Where(v => v is AbstractRequest))
+            foreach (var argument in context.ActionArguments.Values.Where(v => v is AbstractInput))
             {
-                var request = argument as AbstractRequest;
+                var request = argument as AbstractInput;
                 request.Validate();
             }
         }
 
         public void OnActionExecuted(ActionExecutedContext context)
         {
-            // our code after action executes
+
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using InternetTeams.Application.Exceptions;
+using InternetTeams.Domain.Exceptions;
 using InternetTeams.Persistence.Exceptions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -24,6 +25,7 @@ namespace InternetTeams.Web.Filters
             // Register known exception types and handlers.
             _exceptionHandlers = new Dictionary<Type, Action<ExceptionContext>>
             {
+                { typeof(DomainValidationException), HandleValidationException },
                 { typeof(AppValidationException), HandleValidationException },
                 { typeof(NotFoundException), HandleNotFoundException },
                 { typeof(PersistenceException), HandlePersistenceException },
@@ -68,11 +70,11 @@ namespace InternetTeams.Web.Filters
 
         private void HandleValidationException(ExceptionContext context)
         {
-            var appValidationEx = context.Exception as AppValidationException;
-            if (appValidationEx != null)
+            var ValidationEx = context.Exception as AppValidationException ?? context.Exception as DomainValidationException;
+            if (ValidationEx != null)
             {
-                _logger.LogInformation(appValidationEx, "Validation Failed!");
-                foreach (var error in appValidationEx.Failures)
+                _logger.LogInformation(ValidationEx, "Validation Failed!");
+                foreach (var error in ValidationEx.Failures)
                 {
                     context.ModelState.AddModelError(error.PropertyName, error.ErrorMessage);
                 }
@@ -89,7 +91,7 @@ namespace InternetTeams.Web.Filters
                 var response = JsonConvert.SerializeObject(new
                 {
                     //Details = details,
-                    Failures = appValidationEx.Failures,
+                    Failures = ValidationEx.Failures,
                 });
 
                 context.Result = new JsonResult(response);

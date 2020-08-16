@@ -1,26 +1,15 @@
 ﻿using FluentValidation.Results;
-using System;
+using InternetTeams.Domain.Exceptions;
 using System.Collections.Generic;
 
 namespace InternetTeams.Application.Exceptions
 {
-    public class AppValidationException : Exception
+    public class AppValidationException : DomainValidationException
     {
-        public AppValidationException() : base("One or more validation failures have occurred.")
-        {
-            Failures = new List<ValidationFailure>();
-        }
+        public AppValidationException() : base() { }
 
-        public AppValidationException(IList<ValidationFailure> failures) : this()
-        {
-            Failures = failures;
-        }
+        public AppValidationException(IList<ValidationFailure> failures) : base(failures) { }
 
-        public AppValidationException(ValidationFailure failure) : this()
-        {
-            Failures.Add(failure);
-        }
-
-        public IList<ValidationFailure> Failures { get; set; }
+        public AppValidationException(ValidationFailure failure) : base(failure) { }
     }
 }

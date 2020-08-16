@@ -12,7 +12,7 @@ namespace InternetTeams.Domain.Contracts
     public interface IDomainValueRepository
     {
         Task<IEnumerable<DomainValue>> Get(string collactionName,
-            AbstractPagingRequest pagingRequest,
+            Input<PagingInput> pagingInput,
             Expression<Func<DomainValue, bool>> filter = null,
             CancellationToken cancellationToken = default);
 

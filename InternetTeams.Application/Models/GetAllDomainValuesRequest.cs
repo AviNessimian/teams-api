@@ -1,17 +1,21 @@
 ﻿using FluentValidation;
 using InternetTeams.Application.Exceptions;
-using InternetTeams.Domain.Bases;
+using InternetTeams.Domain.Contracts;
 
 namespace InternetTeams.Application.Models
 {
-    public class GetAllDomainValuesRequest : AbstractPagingRequest
+    public class GetAllDomainValuesRequest : PagingInput
     {
         public override void Validate()
         {
-            var validationResult = new GetAllDomainValuesRequestValidator().Validate(this);
-            if (!validationResult.IsValid)
+            if (!IsValid)
             {
-                throw new AppValidationException(validationResult.Errors);
+                var validationResult = new GetAllDomainValuesRequestValidator().Validate(this);
+                if (!validationResult.IsValid)
+                {
+                    throw new AppValidationException(validationResult.Errors);
+                }
+                base.Validate();
             }
         }
     }
@@ -20,8 +24,6 @@ namespace InternetTeams.Application.Models
     {
         public GetAllDomainValuesRequestValidator()
         {
-            RuleFor(x => x.Page).NotEmpty();
-            RuleFor(x => x.PageSize).NotEmpty();
         }
     }
 }

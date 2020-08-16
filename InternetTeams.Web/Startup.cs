@@ -61,9 +61,6 @@ namespace InternetTeams.Web
 
             app.UseHttpsRedirection();
             app.UseMvc();
-
-
-
         }
 
 

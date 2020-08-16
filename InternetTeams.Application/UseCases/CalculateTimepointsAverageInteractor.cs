@@ -1,5 +1,6 @@
 ﻿using InternetTeams.Application.Interfaces;
 using InternetTeams.Application.Models;
+using InternetTeams.Domain.Bases;
 using InternetTeams.Domain.Contracts;
 using InternetTeams.Domain.ValueObjects;
 using System.Collections.Generic;
@@ -24,9 +25,9 @@ namespace InternetTeams.Application.UseCases
 
         //Create an implementation to calculate the average of the numeric values, 
         //grouped by timepoint, for a given domain name (collection name).
-        public async Task<List<TimepointAverage>> Handle(CalculateTimepointsAverageRequest input, CancellationToken cancellationToken = default)
+        public async Task<List<TimepointAverage>> Handle(Input<CalculateTimepointsAverageRequest> input, CancellationToken cancellationToken = default)
         {
-            var collacationName = await _commonService.ValidateCollectionsName(input.CollactionName, cancellationToken);
+            var collacationName = await _commonService.ValidateCollectionsName(input.Data.CollactionName, cancellationToken);
             var timepointAverageList = await _domainValueRepository.GetTimepointAverage(collacationName, cancellationToken);
 
             return timepointAverageList.OrderBy(x => x.Timepoint).ToList();

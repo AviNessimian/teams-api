@@ -1,4 +1,5 @@
 ﻿using InternetTeams.Application.Models;
+using InternetTeams.Domain.Bases;
 using InternetTeams.Domain.ValueObjects;
 using System.Collections.Generic;
 using System.Threading;
@@ -8,6 +9,6 @@ namespace InternetTeams.Application.Interfaces
 {
     public interface ICalculateTimepointsAverageInteractor
     {
-        Task<List<TimepointAverage>> Handle(CalculateTimepointsAverageRequest input, CancellationToken cancellationToken = default);
+        Task<List<TimepointAverage>> Handle(Input<CalculateTimepointsAverageRequest> input, CancellationToken cancellationToken = default);
     }
 }
