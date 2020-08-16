@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 using InternetTeams.Domain.Bases;
-using InternetTeams.Domain.Exceptions;
+using InternetTeams.Application.Exceptions;
 
 namespace InternetTeams.Application.Models
 {

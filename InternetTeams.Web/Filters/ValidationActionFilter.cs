@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc.Filters;
 using System.Linq;
 
-namespace InternetTeams.Infrastructure.Validation
+namespace InternetTeams.Web.Filters
 {
     internal class ValidationActionFilter : IActionFilter
     {

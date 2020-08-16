@@ -1,6 +1,6 @@
-﻿using InternetTeams.Application.Interfaces;
+﻿using InternetTeams.Application.Exceptions;
+using InternetTeams.Application.Interfaces;
 using InternetTeams.Domain.Contracts;
-using InternetTeams.Domain.Exceptions;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
@@ -22,7 +22,7 @@ namespace InternetTeams.Application.Services
             var domains = await _domainValueRepository.GetDomainValueCollectionsNames();
 
             var listOfDomainNames = domains.ToList();
-             listOfDomainNames.Sort();
+            listOfDomainNames.Sort();
 
             return listOfDomainNames;
         }

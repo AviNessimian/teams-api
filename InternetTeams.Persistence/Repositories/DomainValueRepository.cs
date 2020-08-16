@@ -1,4 +1,5 @@
-﻿using InternetTeams.Domain.Contracts;
+﻿using InternetTeams.Domain.Bases;
+using InternetTeams.Domain.Contracts;
 using InternetTeams.Domain.Entities;
 using InternetTeams.Domain.ValueObjects;
 using InternetTeams.Persistence.DomainData;
@@ -26,8 +27,7 @@ namespace InternetTeams.Persistence.Repositories
 
         public async Task<IEnumerable<DomainValue>> Get(
             string collactionName,
-            int pageSize,
-            int page,
+            AbstractPagingRequest pagingRequest,
             Expression<Func<DomainValue, bool>> filter = null,
             CancellationToken cancellationToken = default)
         {
@@ -35,8 +35,8 @@ namespace InternetTeams.Persistence.Repositories
 
             var domainValues = await collaction
                 .Find(filter ?? (_ => true))
-                .Skip((page - 1) * pageSize)
-                .Limit(pageSize)
+                .Skip((pagingRequest.Page - 1) * pagingRequest.PageSize)
+                .Limit(pagingRequest.PageSize)
                 .ToListAsync(cancellationToken);
 
             return domainValues;

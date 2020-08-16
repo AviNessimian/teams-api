@@ -24,7 +24,7 @@ namespace InternetTeams.Application.UseCases
         {
             var collacationName = await _commonService.ValidateCollectionsName(input.CollactionName);
 
-            var domainValueList = await _domainValueRepository.Get(collacationName, input.PageSize, input.Page);
+            var domainValueList = await _domainValueRepository.Get(collacationName, input, null, cancellationToken);
 
             var count = await _domainValueRepository.Count(collacationName);
 

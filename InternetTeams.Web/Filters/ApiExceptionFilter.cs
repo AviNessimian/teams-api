@@ -1,4 +1,5 @@
-﻿using InternetTeams.Domain.Exceptions;
+﻿using InternetTeams.Application.Exceptions;
+using InternetTeams.Persistence.Exceptions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
@@ -9,7 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Net;
 
-namespace InternetTeams.Infrastructure.ExceptionHandling
+namespace InternetTeams.Web.Filters
 {
     internal class ApiExceptionFilter : IExceptionFilter
     {

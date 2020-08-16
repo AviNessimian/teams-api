@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace InternetTeams.Domain.Exceptions
+namespace InternetTeams.Persistence.Exceptions
 {
     public class PersistenceException : Exception
     {

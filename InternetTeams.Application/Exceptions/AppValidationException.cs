@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace InternetTeams.Domain.Exceptions
+namespace InternetTeams.Application.Exceptions
 {
     public class AppValidationException : Exception
     {
