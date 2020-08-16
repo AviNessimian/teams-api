@@ -107,8 +107,8 @@ namespace InternetTeams.Web.Filters
                 var response = JsonConvert.SerializeObject(new
                 {
                     Message = notFoundEx.Message,
-                    //Type = "https://tools.ietf.org/html/rfc7231#section-6.5.4",
-                    //Title = "The specified resource was not found.",
+                    Type = "https://tools.ietf.org/html/rfc7231#section-6.5.4",
+                    Title = "The specified resource was not found.",
                 });
                 context.Result = new JsonResult(response);
                 context.ExceptionHandled = true;
@@ -124,12 +124,13 @@ namespace InternetTeams.Web.Filters
                 context.HttpContext.Response.StatusCode = (int)HttpStatusCode.ServiceUnavailable;
                 var response = JsonConvert.SerializeObject(new
                 {
-                    Message = persistenceEx.Message
+                    Message = persistenceEx.Message,
+                    Type = "https://tools.ietf.org/html/rfc7231#section-6.6.4",
+                    Title = "",
                 });
                 context.Result = new JsonResult(response);
                 context.ExceptionHandled = true;
             }
-
         }
     }
 }

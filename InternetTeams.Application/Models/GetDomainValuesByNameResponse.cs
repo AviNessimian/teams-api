@@ -3,7 +3,6 @@ using System.Collections.Generic;
 
 namespace InternetTeams.Application.Models
 {
-
     public class GetDomainValuesByNameResponse
     {
         public GetDomainValuesByNameResponse(long collactionCount, List<DomainValue> domainValues)

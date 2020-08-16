@@ -10,7 +10,6 @@ namespace InternetTeams.Persistence.DomainData
         internal DomainDataClient(IConfigurationSection configurationSection)
             : base(GeSettings(configurationSection.Get<DomainDataSettings>())) { }
 
-
         internal static MongoClientSettings GeSettings(DomainDataSettings settings)
         {
             var credentials = MongoCredential.CreateCredential(

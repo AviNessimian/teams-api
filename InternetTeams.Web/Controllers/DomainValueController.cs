@@ -1,9 +1,6 @@
 ﻿using InternetTeams.Application.Interfaces;
 using InternetTeams.Application.Models;
-using InternetTeams.Domain.Entities;
-using InternetTeams.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -12,21 +9,21 @@ namespace InternetTeams.Web.Controllers
     public class DomainValuesController : ApiControllerBase
     {
         [HttpGet]
-        public async Task<ActionResult<List<DomainValue>>> Get(
+        public async Task<IActionResult> Get(
             CancellationToken cancellationToken,
             [FromServices] IGetAllDomainValuesInteractor Interactor,
             [FromQuery] GetAllDomainValuesRequest request) => Ok(await Interactor.Handle(request, cancellationToken));
 
 
         [HttpGet("ByName")]
-        public async Task<ActionResult<List<DomainValue>>> Get(
+        public async Task<IActionResult> Get(
             CancellationToken cancellationToken,
             [FromServices] IGetDomainValuesByNameInteractor Interactor,
             [FromQuery] GetDomainValuesByNameRequest request) => Ok(await Interactor.Handle(request, cancellationToken));
 
 
         [HttpGet("DomainNames")]
-        public async Task<ActionResult<List<string>>> Get(
+        public async Task<IActionResult> Get(
               CancellationToken cancellationToken,
               [FromServices] ICommonService commonService) => Ok(await commonService.GetDomainNames(cancellationToken));
 

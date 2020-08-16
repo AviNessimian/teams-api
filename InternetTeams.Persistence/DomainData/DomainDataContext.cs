@@ -19,7 +19,6 @@ namespace InternetTeams.Persistence.DomainData
             {
                 throw new PersistenceException($"the Database {dbName} is not connected");
             }
-
         }
 
         internal IMongoDatabase Database { get; }
