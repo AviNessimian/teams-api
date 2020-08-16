@@ -20,12 +20,13 @@ namespace InternetTeams.Application.UseCases
             _commonService = commonService;
         }
 
+
         // Create an implementation to retrieve the documents of a domain by domain name (collection name). 
         public async Task<GetDomainValuesByNameResponse> Handle(Input<GetDomainValuesByNameRequest> input, CancellationToken cancellationToken)
         {
             var collacationName = await _commonService.ValidateCollectionsName(input.Data.CollactionName);
 
-            var domainValueList = await _domainValueRepository.Get(collacationName, new Input<PagingInput>(input.Data), null, cancellationToken);
+            var domainValueList = await _domainValueRepository.Get(collacationName, Input<PagingInput>.Set(input.Data), null, cancellationToken);
 
             var count = await _domainValueRepository.Count(collacationName);
 

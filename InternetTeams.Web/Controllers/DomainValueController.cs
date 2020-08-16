@@ -13,14 +13,14 @@ namespace InternetTeams.Web.Controllers
         public async Task<IActionResult> Get(
             CancellationToken cancellationToken,
             [FromServices] IGetAllDomainValuesInteractor Interactor,
-            [FromQuery] GetAllDomainValuesRequest request) => Ok(await Interactor.Handle(new Input<GetAllDomainValuesRequest>(request), cancellationToken));
+            [FromQuery] GetAllDomainValuesRequest request) => Ok(await Interactor.Handle(Input<GetAllDomainValuesRequest>.Set(request), cancellationToken));
 
 
         [HttpGet("ByName")]
         public async Task<IActionResult> Get(
             CancellationToken cancellationToken,
             [FromServices] IGetDomainValuesByNameInteractor Interactor,
-            [FromQuery] GetDomainValuesByNameRequest request) => Ok(await Interactor.Handle(new Input<GetDomainValuesByNameRequest>(request), cancellationToken));
+            [FromQuery] GetDomainValuesByNameRequest request) => Ok(await Interactor.Handle(Input<GetDomainValuesByNameRequest>.Set(request), cancellationToken));
 
 
         [HttpGet("DomainNames")]
@@ -33,7 +33,7 @@ namespace InternetTeams.Web.Controllers
         public async Task<IActionResult> Get(
             CancellationToken cancellationToken,
             [FromServices] ICalculateTimepointsAverageInteractor Interactor,
-            [FromQuery] CalculateTimepointsAverageRequest request) => Ok(await Interactor.Handle(new Input<CalculateTimepointsAverageRequest>(request), cancellationToken));
+            [FromQuery] CalculateTimepointsAverageRequest request) => Ok(await Interactor.Handle(Input<CalculateTimepointsAverageRequest>.Set(request), cancellationToken));
 
     }
 }
