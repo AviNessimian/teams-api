@@ -7,7 +7,7 @@ ___
 # Using:
   * DotNet Core 2.2
   * MongoDb
-  * Clean Architecture
+  * Clean Code
   * Clean Architecture 
   
 
