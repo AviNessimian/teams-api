@@ -10,7 +10,6 @@ ___
   * Clean Architecture
   * Clean Architecture 
   
-  ![Screenshot](/docs/Architecture.png)
 
 
 
