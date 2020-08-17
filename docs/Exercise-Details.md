@@ -1,4 +1,4 @@
-Please see the attached database in the [docs](/docs/Exercise-Details.md).
+Please see the attached database in the [docs](/docs/domainData).
 You can use the mongorestore tool to import it to mongodb.
 
 Mongo Database reference:
