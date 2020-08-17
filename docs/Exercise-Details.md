@@ -37,11 +37,11 @@ Mongo Database reference:
        -Create an implementation to retrieve a list of all domains (collection names).
 
        -Create an implementation to retrieve the documents of a domain by domain name (collection name). 
-        *Use the data type of #A for the results.
-        *Consider limiting the retrieved documents to a given range.
+        * Use the data type of #A for the results.
+        * Consider limiting the retrieved documents to a given range.
        
        -Create an implementation to calculate the average of the numeric values, grouped by timepoint, for a given domain name (collection name).
-        *Use the data type of #B for the results.
+        * Use the data type of #B for the results.
 
 
    E. Create a Web API:
