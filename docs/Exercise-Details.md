@@ -2,17 +2,23 @@ Please see the attached database in the [docs](/docs/domainData).
 You can use the mongorestore tool to import it to mongodb.
 
 Mongo Database reference:
--DB: domainData
--User: domainReader
--Password: reader
--Auth mechanism: SCRAM-SHA-1
+- DB: domainData
+- User: domainReader
+- Password: reader
+- Auth mechanism: SCRAM-SHA-1
 
-3 collections, domainA, domainB, domainC, with the same schema:
-   SubjectId field (String),
-   Timepoint field (Double), 
-   NumericValue field (Double)
+### collections
+3 collections:
+   * domainA
+   * domainB
+   * domainC
 
-## Instructions: ##
+with the same schema
+   - SubjectId field (String),
+   - Timepoint field (Double), 
+   - NumericValue field (Double)
+
+## Instructions: 
 
 1. Server-side C# Web API application (.net core):
 
