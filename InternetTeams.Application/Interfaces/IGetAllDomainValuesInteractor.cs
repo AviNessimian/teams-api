@@ -1,5 +1,5 @@
 ﻿using InternetTeams.Application.Models;
-using InternetTeams.Domain.Bases;
+using InternetTeams.Application.Bases;
 using InternetTeams.Domain.Entities;
 using System.Collections.Generic;
 using System.Threading;

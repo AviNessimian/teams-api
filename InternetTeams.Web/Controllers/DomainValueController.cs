@@ -1,6 +1,6 @@
 ﻿using InternetTeams.Application.Interfaces;
 using InternetTeams.Application.Models;
-using InternetTeams.Domain.Bases;
+using InternetTeams.Application.Bases;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading;
 using System.Threading.Tasks;

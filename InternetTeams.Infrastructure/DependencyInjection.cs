@@ -1,4 +1,4 @@
-﻿using InternetTeams.Domain.Contracts;
+﻿using InternetTeams.Application.Contracts;
 using InternetTeams.Infrastructure.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;

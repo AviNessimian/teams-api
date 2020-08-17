@@ -24,7 +24,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{ED0A213E-5
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InternetTeams.UnitTests", "InternetTeams.UnitTests\InternetTeams.UnitTests.csproj", "{DDC070AD-069F-40D8-ACF3-B991FA676D83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InternetTeams.Infrastructure", "InternetTeams.Infrastructure\InternetTeams.Infrastructure.csproj", "{677E727D-B31C-445E-915A-A46323BD30AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InternetTeams.Infrastructure", "InternetTeams.Infrastructure\InternetTeams.Infrastructure.csproj", "{677E727D-B31C-445E-915A-A46323BD30AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

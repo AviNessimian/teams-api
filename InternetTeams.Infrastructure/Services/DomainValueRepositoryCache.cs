@@ -1,5 +1,5 @@
-﻿using InternetTeams.Domain.Bases;
-using InternetTeams.Domain.Contracts;
+﻿using InternetTeams.Application.Bases;
+using InternetTeams.Application.Contracts;
 using InternetTeams.Domain.Entities;
 using InternetTeams.Domain.ValueObjects;
 using LazyCache;

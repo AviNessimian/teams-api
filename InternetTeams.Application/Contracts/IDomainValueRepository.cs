@@ -1,4 +1,4 @@
-﻿using InternetTeams.Domain.Bases;
+﻿using InternetTeams.Application.Bases;
 using InternetTeams.Domain.Entities;
 using InternetTeams.Domain.ValueObjects;
 using System;
@@ -7,7 +7,7 @@ using System.Linq.Expressions;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace InternetTeams.Domain.Contracts
+namespace InternetTeams.Application.Contracts
 {
     public interface IDomainValueRepository
     {

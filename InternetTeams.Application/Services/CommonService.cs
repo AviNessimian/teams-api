@@ -1,6 +1,6 @@
 ﻿using InternetTeams.Application.Exceptions;
 using InternetTeams.Application.Interfaces;
-using InternetTeams.Domain.Contracts;
+using InternetTeams.Application.Contracts;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;

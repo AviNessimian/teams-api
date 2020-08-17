@@ -1,7 +1,7 @@
 ﻿using InternetTeams.Application.Interfaces;
 using InternetTeams.Application.Models;
-using InternetTeams.Domain.Bases;
-using InternetTeams.Domain.Contracts;
+using InternetTeams.Application.Bases;
+using InternetTeams.Application.Contracts;
 using InternetTeams.Domain.Entities;
 using System.Collections.Generic;
 using System.Threading;

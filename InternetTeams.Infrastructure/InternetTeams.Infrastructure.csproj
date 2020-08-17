@@ -12,7 +12,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\InternetTeams.Domain\InternetTeams.Domain.csproj" />
+	  <ProjectReference Include="..\InternetTeams.Application\InternetTeams.Application.csproj" />
 	</ItemGroup>
 
 </Project>

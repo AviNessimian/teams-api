@@ -1,8 +1,8 @@
 ﻿using FluentValidation;
-using InternetTeams.Domain.Bases;
+using InternetTeams.Application.Bases;
 using InternetTeams.Domain.Exceptions;
 
-namespace InternetTeams.Domain.Contracts
+namespace InternetTeams.Application.Contracts
 {
     public class PagingInput : AbstractInput
     {

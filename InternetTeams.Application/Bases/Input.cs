@@ -1,4 +1,4 @@
-﻿namespace InternetTeams.Domain.Bases
+﻿namespace InternetTeams.Application.Bases
 {
     public class Input<T> where T : AbstractInput
     {

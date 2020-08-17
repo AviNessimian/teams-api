@@ -1,4 +1,4 @@
-﻿using InternetTeams.Domain.Bases;
+﻿using InternetTeams.Application.Bases;
 using Microsoft.AspNetCore.Mvc.Filters;
 using System.Linq;
 
