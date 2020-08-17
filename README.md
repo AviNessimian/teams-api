@@ -1,3 +1,19 @@
-# InternetTeamsSln
+# Internet Teams Server  
 
-.NetCore 2.2
+##### [Internet Teams Client App](https://github.com/AviNessimian/internet-teams-app "Client Side")
+##### [Exercise README](/docs/Exercise-Details.md)
+___
+* DotNet Core 2.2
+* MongoDb
+* Clean Architecture
+  ![Screenshot](/docs/Architecture.png)
+
+
+
+
+
+
+
+
+
+
