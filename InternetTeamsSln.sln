@@ -8,7 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{58EDE548-55AF-420F-87B8-D633517412DB}"
 	ProjectSection(SolutionItems) = preProject
 		docs\Architecture.png = docs\Architecture.png
-		docs\Exercise-Details.txt = docs\Exercise-Details.txt
+		docs\Exercise-Details.md = docs\Exercise-Details.md
 		docs\Interne Teams Api.postman_collection.json = docs\Interne Teams Api.postman_collection.json
 	EndProjectSection
 EndProject
