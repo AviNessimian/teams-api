@@ -1,7 +1,7 @@
 # Internet Teams Server  
 
-##### [Go To Internet Teams Client](https://github.com/AviNessimian/internet-teams-app "Client Side")
-##### [Go To Exercise README](/docs/Exercise-Details.md)
+##### [Go To Client App](https://github.com/AviNessimian/internet-teams-app "Client Side")
+##### [Go To Assessment](/docs/Exercise-Details.md)
 ___
 
 # Using:
