@@ -1,4 +1,4 @@
-# Internet Teams Server  
+# teams-api
 
 ##### [Go To Client App](https://github.com/AviNessimian/internet-teams-app "Client Side")
 ##### [Go To Assessment](/docs/Exercise-Details.md)
